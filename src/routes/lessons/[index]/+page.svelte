@@ -12,16 +12,14 @@
 	const index = Number(data.index)
 	let answer = ''
 	let isCorrect: boolean | null = null
-
-	let isReady = engine.isReady
 	let exercise: ReturnType<Engine['getNextExercise']> | null = null
 	let img: ReturnType<typeof loadImage>
-	$: {
-		if ($isReady) {
-			exercise = engine.getNextExercise(index)
-			img = loadImage(exercise.img)
+
+	engine.isReady.subscribe((isReady) => {
+		if (isReady) {
+			next(true)
 		}
-	}
+	})
 
 	function check(e: Event) {
 		e.preventDefault()
@@ -32,8 +30,8 @@
 		isCorrect = engine.checkAnswer(index, answer)
 		engine.saveProgress()
 	}
-	function next() {
-		if (engine.isLessonDone(index)) {
+	function next(force?: true) {
+		if (engine.isLessonDone(index) && !force) {
 			goto(`/congrats/${index}`)
 			return
 		}

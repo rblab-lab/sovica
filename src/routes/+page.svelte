@@ -4,13 +4,12 @@
 	import type { Engine } from '../lib/model/engine'
 
 	const engine = getContext<Engine>('engine')
-	let isReady = engine.isReady
 	let lessons: ReturnType<Engine['getLessons']> = []
-	$: {
-		if ($isReady) {
+	engine.isReady.subscribe((isReady) => {
+		if (isReady) {
 			lessons = engine.getLessons()
 		}
-	}
+	})
 </script>
 
 <div class="container">

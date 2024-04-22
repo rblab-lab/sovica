@@ -114,7 +114,6 @@ export class Engine {
 		if (!next) {
 			return this.getNextExercise(lesson + 1)
 		}
-		usersLesson.currentExercise++
 		const exercise = this.lessons[lesson].exercises[next.type][next.index]
 		return { ...next, ...exercise }
 	}
@@ -173,12 +172,12 @@ export class Engine {
 		if (!usersLesson) {
 			return false
 		}
-		return usersLesson.currentExercise === usersLesson.plan.length - 1
+		return usersLesson.currentExercise >= usersLesson.plan.length - 1
 	}
 
 	checkAnswer(lesson: number, answer: string) {
 		const usersLesson = this.user.lessons[lesson]
-		const usersExercise = usersLesson.plan[usersLesson.currentExercise - 1]
+		const usersExercise = usersLesson.plan[usersLesson.currentExercise]
 		const exerciseData = this.lessons[lesson].exercises[usersExercise.type][usersExercise.index]
 
 		let isCorrect = false
@@ -194,6 +193,8 @@ export class Engine {
 		} else {
 			usersLesson.plan.push(usersExercise)
 		}
+
+		usersLesson.currentExercise++
 		return isCorrect
 	}
 

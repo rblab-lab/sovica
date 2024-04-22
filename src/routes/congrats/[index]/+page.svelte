@@ -8,12 +8,11 @@
 	const index = Number(data.index)
 	let correct: number
 	let xpGain: number
-	let isReady = engine.isReady
-	$: {
-		if ($isReady) {
+	engine.isReady.subscribe((isReady) => {
+		if (isReady) {
 			;({ correct, xpGain } = engine.getScores(index))
 		}
-	}
+	})
 
 	function next() {
 		engine.updateUsersXP(xpGain)
