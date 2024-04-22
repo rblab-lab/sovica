@@ -1,0 +1,43 @@
+# cSpell:disable
+- title: 'Приветствия'
+  img: greeting.webp
+  hint: |
+    **Слова**
+    - zdravo – здравствуй
+    - dobro jutro – доброе утро
+    - dobar dan – добрый день
+    - dobro veče – добрый вечер
+    - doviđenja – до свидания
+  exercises:
+    vocabulary:
+      - ['zdravo', 'здравствуй', 'greeting.webp']
+      - ['dobro jutro', 'доброе утро', 'morning.webp']
+      - ['dobar dan', 'добрый день', 'day.webp']
+      - ['dobro veče', 'добрый вечер', 'evening.webp']
+      - ['doviđenja', 'до свидания', 'greeting.webp']
+- title: Глагол Jesam
+  img: is.webp
+  hint: |
+    Глагол _jesam_ утратил инфинитив, близок по значению к русскому "есть"
+    и используется в указательных предложениях там, где в русском "есть"
+    обычно пропускается, например "Я из Москвы", "Ja jesam iz Moskvi". Однако, 
+    в живой речи используется сокращённая форма: 
+      - Ja jesam → Ja sam, 
+      - Ti jesi → Ti si, 
+      - On jeste → On je
+      - Mi jsmo → Mi smo
+      - Vi jeste → Vi ste
+      - Oni jesu → Oni su
+  exercises:
+    vocabulary:
+      - ['dobar', 'хороший', 'good.webp']
+      - ['veliki', 'большой', 'big.webp']
+    sentences:
+      - ['Ja sam iz Minska', 'Я из Минска', 'minsk.webp']
+      - ['Ona je iz Moskvi', 'Она из Москвы', 'moscow.webp']
+      - ['Vi ste veliki', 'Вы большие', 'big.webp']
+      - ['One su dobre', 'Они добрые', 'good-w.webp']
+      - ['Mi smo iz Beograda', 'Мы из Белграда', 'belgrade.webp']
+      - ['Oni su iz Kijeva', 'Они из Киева', 'kiev.webp']
+      - ['Vi ste dobre', 'Вы хорошие', 'good-w.webp']
+      - ['Ja sam dobar', 'Я хороший', 'good.webp']
