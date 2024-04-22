@@ -6,13 +6,17 @@ Specification is [here](./docs/spec.md).
 
 ## TODO
 
-- [] Fix next when there's no lessons left
-- [] Responsive images
-- [] Deploy
+- [ ] Fix next when there's no lessons left
+- [ ] Responsive images
+- [ ] Deploy
+- [ ] Add more lessons
+- [ ] Add json schema for lessons & check for it
+- [ ] Add License
+- [ ] Set permissions
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've created a project and installed dependencies with `yarn`), start a development server:
 
 ```bash
 yarn dev
