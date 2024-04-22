@@ -1,12 +1,17 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte'
+	import { shuffle } from '$lib/model/engine'
 
 	export let sentence = ''
+	export let answer = ''
+	export let vocabulary: string[] = []
 	let words: string[] = []
 	let constructed: string[] = []
 	$: {
-		words = sentence.split(' ').sort(() => Math.random() - 0.5)
-		constructed = []
+		if (answer === '') {
+			words = shuffle(sentence.split(' ').concat(vocabulary.slice(0, 4)))
+			constructed = []
+		}
 	}
 	const dispatch = createEventDispatcher()
 

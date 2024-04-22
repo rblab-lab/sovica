@@ -150,10 +150,10 @@ export class Engine {
 			(ex, i) => ({ type: 'sentences', index: i, ui: 'choose' }) as const
 		)
 		// Shuffle the vocabulary
-		const vocabularyShuffled = vocabulary.sort(() => Math.random() - 0.5)
+		const vocabularyShuffled = shuffle(vocabulary)
 		plan.push(...vocabularyShuffled)
 		const cont = [...vocabulary, ...vocabulary, ...sentences, ...sentences, ...sentences]
-		cont.sort(() => Math.random() - 0.5)
+		shuffle(cont)
 
 		plan.push(
 			...cont.map((ex) => {
@@ -220,8 +220,18 @@ export class Engine {
 
 	getVocabularyChoices(lesson: number) {
 		const lessonData = this.lessons[lesson]
-		const vocabulary = lessonData.exercises.vocabulary
-		return vocabulary.map((ex) => ex.mne)
+		// find previous exercises with vocabulary
+		let prevVocabulary: string[] = []
+		for (let i = lesson - 1; i >= 0; i--) {
+			if (i < 0) break
+			const prevLesson = this.lessons[i]
+			if (prevLesson.exercises.vocabulary.length) {
+				prevVocabulary = prevLesson.exercises.vocabulary.map((ex) => ex.mne)
+				break
+			}
+		}
+		const vocabulary = lessonData.exercises.vocabulary.map((ex) => ex.mne)
+		return vocabulary.concat(shuffle(prevVocabulary).slice(0, 4))
 	}
 }
 
@@ -267,4 +277,12 @@ export function loadImage(img: string) {
 		})
 	}
 	return wr
+}
+
+export function shuffle<T>(array: T[]) {
+	for (let i = array.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1))
+		;[array[i], array[j]] = [array[j], array[i]]
+	}
+	return array
 }

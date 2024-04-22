@@ -20,6 +20,7 @@
 			next(true)
 		}
 	})
+	let choices = engine.getVocabularyChoices(index)
 
 	function check(e: Event) {
 		e.preventDefault()
@@ -51,13 +52,9 @@
 			<WaitingImage src={img} alt={exercise.mne} width={300} height={300} />
 			<h2 class="question">{exercise.rus}</h2>
 			{#if exercise.ui === 'choose'}
-				<Choose
-					choices={engine.getVocabularyChoices(index).sort(() => Math.random() - 0.5)}
-					on:change={setAnswer}
-					selected={answer}
-				/>
+				<Choose {choices} on:change={setAnswer} selected={answer} />
 			{:else if exercise.ui === 'construct'}
-				<Construct sentence={exercise.mne} on:change={setAnswer} />
+				<Construct vocabulary={choices} sentence={exercise.mne} on:change={setAnswer} {answer} />
 			{:else if exercise.ui === 'translate'}
 				<Translate on:change={setAnswer} {answer} />
 			{/if}

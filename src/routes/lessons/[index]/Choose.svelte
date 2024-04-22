@@ -1,8 +1,14 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte'
+	import { shuffle } from '$lib/model/engine'
 	export let choices: string[]
 	const dispatch = createEventDispatcher()
 	export let selected: string
+	$: {
+		if (selected === '') {
+			choices = shuffle(choices)
+		}
+	}
 
 	function select(word: string) {
 		selected = word
