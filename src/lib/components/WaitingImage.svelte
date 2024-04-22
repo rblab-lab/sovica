@@ -10,7 +10,7 @@
 </script>
 
 {#if $src}
-	<img {style} src={$src} {alt} {...$$restProps} />
+	<enhanced:img {style} src={$src} sizes="{width}px" {alt} {...$$restProps} />
 {:else}
 	<div {style} {...$$restProps} />
 {/if}

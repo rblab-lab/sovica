@@ -1,5 +1,10 @@
 import { writable, type Writable } from 'svelte/store'
-const pictures = import.meta.glob('../../pics/*.webp')
+const pictures = import.meta.glob('../../pics/*.webp', {
+	query: {
+		enhanced: true,
+		w: '1024;512;256;128;64',
+	},
+})
 
 interface LessonRaw {
 	title: string
@@ -71,6 +76,10 @@ export class Engine {
 	}
 
 	setUser(user: User) {
+		if (!user) {
+			this.isReady.set(true)
+			return
+		}
 		this.user = user
 		this.userXP.set(this.user.totalXP)
 		this.isReady.set(true)

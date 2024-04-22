@@ -7,7 +7,8 @@ Specification is [here](./docs/spec.md).
 ## TODO
 
 - [ ] Fix next when there's no lessons left
-- [ ] Responsive images
+- [x] Responsive images
+- [ ] Preload images
 - [ ] Deploy
 - [ ] Add more lessons
 - [ ] Add json schema for lessons & check for it

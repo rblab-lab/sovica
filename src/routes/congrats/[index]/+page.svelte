@@ -2,7 +2,6 @@
 	import { goto } from '$app/navigation'
 	import { Engine } from '$lib/model/engine'
 	import { getContext } from 'svelte'
-	import congrats from '../../../pics/congrats.webp'
 
 	export let data
 	const engine = getContext<Engine>('engine')
@@ -24,7 +23,12 @@
 </script>
 
 <div class="frame">
-	<img src={congrats} alt="congrats" width="300" height="300" />
+	<enhanced:img
+		src="../../../pics/congrats.webp?w=1024;512;256;128;64"
+		sizes="300px"
+		alt="congrats"
+		style="width: 300px; height: 300px;"
+	/>
 	<h2 class="congrats">Ура! Урок сделан!🎉</h2>
 	<p>Правильно на: {Math.round(correct * 100)}%</p>
 	<p>Опыта получено: {xpGain}</p>

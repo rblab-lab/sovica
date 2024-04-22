@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount, setContext } from 'svelte'
 	import { Engine } from '$lib/model/engine'
-	import owl from '../pics/owl.webp'
 	import { browser } from '$app/environment'
 	export let data
 
@@ -20,7 +19,12 @@
 <div class="app-container">
 	<div class="header">
 		<a class="home" href="/">
-			<img src={owl} alt="logo" width="30" />
+			<enhanced:img
+				src="../pics/owl.webp?w=1024;512;256;128;64"
+				sizes="30px"
+				alt="logo"
+				style="width: 30px; height: 30px;"
+			/>
 			<div>Sovica</div>
 		</a>
 		<div class="xp">

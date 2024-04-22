@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --port 3717",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -28,6 +28,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/enhanced-img": "^0.2.0",
+		"sharp": "^0.33.3",
 		"yaml": "^2.4.1"
 	}
 }
