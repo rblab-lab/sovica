@@ -174,6 +174,9 @@ export class Engine {
 		}
 		return usersLesson.currentExercise >= usersLesson.plan.length - 1
 	}
+	isThereLesson(lesson: number) {
+		return this.lessons[lesson] !== undefined
+	}
 
 	checkAnswer(lesson: number, answer: string) {
 		const usersLesson = this.user.lessons[lesson]

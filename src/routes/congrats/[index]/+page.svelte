@@ -13,8 +13,14 @@
 			;({ correct, xpGain } = engine.getScores(index))
 		}
 	})
+	let finished = false
 
 	function next() {
+		if (!engine.isThereLesson(index + 1)) {
+			finished = true
+			return
+		}
+
 		engine.updateUsersXP(xpGain)
 		engine.saveProgress()
 		goto(`/lessons/${index + 1}`)
@@ -28,11 +34,15 @@
 		alt="congrats"
 		style="width: 300px; height: 300px;"
 	/>
-	<h2 class="congrats">Ура! Урок сделан!🎉</h2>
-	<p>Правильно на: {Math.round(correct * 100)}%</p>
-	<p>Опыта получено: {xpGain}</p>
+	{#if !finished}
+		<h2 class="congrats">Ура! Урок сделан!🎉</h2>
+		<p>Правильно на: {Math.round(correct * 100)}%</p>
+		<p>Опыта получено: {xpGain}</p>
 
-	<button on:click={next} class="btn">next</button>
+		<button on:click={next} class="btn">next</button>
+	{:else}
+		<h2 class="congrats">А всё! ¯\_(ツ)_/¯</h2>
+	{/if}
 </div>
 
 <style>

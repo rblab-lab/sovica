@@ -6,11 +6,12 @@ Specification is [here](./docs/spec.md).
 
 ## TODO
 
-- [ ] Fix next when there's no lessons left
+- [x] Fix next when there's no lessons left
 - [x] Responsive images
 - [ ] Preload images
 - [ ] Deploy
 - [ ] Add more lessons
+- [ ] Add hint & about pop-ups
 - [ ] Add json schema for lessons & check for it
 - [ ] Add License
 - [ ] Set permissions
