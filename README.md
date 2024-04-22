@@ -8,7 +8,7 @@ Specification is [here](./docs/spec.md).
 
 - [x] Fix next when there's no lessons left
 - [x] Responsive images
-- [ ] Preload images
+- [x] Preload images
 - [ ] Deploy
 - [ ] Add more lessons
 - [ ] Add hint & about pop-ups

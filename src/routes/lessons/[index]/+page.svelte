@@ -1,8 +1,9 @@
 <script lang="ts">
+	import { getContext } from 'svelte'
 	import { goto } from '$app/navigation'
 	import WaitingImage from '$lib/components/WaitingImage.svelte'
 	import { Engine, loadImage } from '$lib/model/engine'
-	import { getContext } from 'svelte'
+	import PreloadImage from '$lib/components/PreloadImage.svelte'
 	import Choose from './Choose.svelte'
 	import Construct from './Construct.svelte'
 	import Translate from './Translate.svelte'
@@ -14,6 +15,7 @@
 	let isCorrect: boolean | null = null
 	let exercise: ReturnType<Engine['getNextExercise']> | null = null
 	let img: ReturnType<typeof loadImage>
+	let img2Preload: ReturnType<typeof loadImage>
 
 	engine.isReady.subscribe((isReady) => {
 		if (isReady) {
@@ -25,11 +27,19 @@
 	function check(e: Event) {
 		e.preventDefault()
 		if (isCorrect !== null) {
+			// Ладно! clicked
 			next()
 			return
 		}
 		isCorrect = engine.checkAnswer(index, answer)
 		engine.saveProgress()
+		// preload next exercise
+		const nextExercise = engine.getNextExercise(index)
+		if (nextExercise) {
+			console.log(nextExercise.rus)
+			img2Preload = loadImage(nextExercise.img)
+		}
+		// TODO preload congrats image
 	}
 	function next(force?: true) {
 		if (engine.isLessonDone(index) && !force) {
@@ -71,6 +81,9 @@
 		{/if}
 	</div>
 </form>
+{#if img2Preload}
+	<PreloadImage src={img2Preload} width={300} height={300} />
+{/if}
 
 <style>
 	.exercise {

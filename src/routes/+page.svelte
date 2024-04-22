@@ -1,13 +1,22 @@
 <script lang="ts">
 	import { getContext } from 'svelte'
 	import WaitingImage from '$lib/components/WaitingImage.svelte'
-	import type { Engine } from '../lib/model/engine'
+	import { loadImage, type Engine } from '$lib/model/engine'
+	import PreloadImage from '$lib/components/PreloadImage.svelte'
 
 	const engine = getContext<Engine>('engine')
 	let lessons: ReturnType<Engine['getLessons']> = []
+	let preloadImage: ReturnType<typeof loadImage> | undefined
 	engine.isReady.subscribe((isReady) => {
 		if (isReady) {
 			lessons = engine.getLessons()
+			const nextLesson = lessons.find((lesson) => lesson.isFuture)
+			const nextIndex = nextLesson ? lessons.indexOf(nextLesson) : lessons.length
+			const currentLesson = lessons[nextIndex - 1]
+			if (!currentLesson.progress) {
+				const exToPreload = engine.getNextExercise(nextIndex - 1)
+				preloadImage = loadImage(exToPreload.img)
+			}
 		}
 	})
 </script>
@@ -27,6 +36,9 @@
 		{/each}
 	</div>
 </div>
+{#if preloadImage}
+	<PreloadImage src={preloadImage} width={300} height={300} />
+{/if}
 
 <style>
 	.lesson {
