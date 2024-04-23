@@ -12,10 +12,12 @@
 			lessons = engine.getLessons()
 			const nextLesson = lessons.find((lesson) => lesson.isFuture)
 			const nextIndex = nextLesson ? lessons.indexOf(nextLesson) : lessons.length
-			const currentLesson = lessons[nextIndex - 1]
-			if (!currentLesson.progress) {
-				const exToPreload = engine.getNextExercise(nextIndex - 1)
-				preloadImage = loadImage(exToPreload.img)
+			const currentIndex = nextIndex - 1
+			// we preload only if the next exercise is never visited, otherwise it's already in cache
+			if (lessons[currentIndex].progress === 0) {
+				engine.initLesson(currentIndex)
+				const exToPreload = engine.getCurrentExercise(currentIndex)
+				preloadImage = exToPreload ? loadImage(exToPreload.img) : undefined
 			}
 		}
 	})

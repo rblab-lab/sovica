@@ -22,6 +22,8 @@ export interface ExerciseRaw {
 	img: string
 }
 
+export type ExerciseData = Exercise & ExerciseRaw & { progress: number }
+
 interface Lesson {
 	title: string
 	img: string
@@ -87,12 +89,12 @@ export class Engine {
 
 	getLessons() {
 		return this.lessons.map((lesson, i) => {
-			const usersLesson = this.user.lessons[i] || 0
+			const usersLesson = this.user.lessons[i]
 			const isCurrent = i === this.user.lessons.length - 1
 			const isFuture = i > this.user.lessons.length
 			let progress = 0
 			if (usersLesson) {
-				progress = usersLesson.currentExercise / (usersLesson.plan.length - 1)
+				progress = usersLesson.currentExercise / usersLesson.plan.length
 			}
 			return {
 				title: lesson.title,
@@ -105,20 +107,21 @@ export class Engine {
 		})
 	}
 
-	getNextExercise(lesson: number): Exercise & ExerciseRaw {
+	getCurrentExercise(lesson: number): ExerciseData | null {
 		let usersLesson = this.user.lessons[lesson]
-		if (!usersLesson || this.isLessonDone(lesson)) {
-			usersLesson = this.initLesson(lesson)
+		if (!usersLesson) {
+			return null
 		}
-		const next = usersLesson.plan[usersLesson.currentExercise]
-		if (!next) {
-			return this.getNextExercise(lesson + 1)
+		const current = usersLesson.plan[usersLesson.currentExercise]
+		if (!current) {
+			return null
 		}
-		const exercise = this.lessons[lesson].exercises[next.type][next.index]
-		return { ...next, ...exercise }
+		const exercise = this.lessons[lesson].exercises[current.type][current.index]
+		const progress = usersLesson.currentExercise / usersLesson.plan.length
+		return { ...current, ...exercise, progress }
 	}
 
-	private initLesson(lesson: number) {
+	initLesson(lesson: number) {
 		const plan = this.createLessonPlan(lesson)
 		const usersLesson = {
 			currentExercise: 0,
@@ -172,7 +175,7 @@ export class Engine {
 		if (!usersLesson) {
 			return false
 		}
-		return usersLesson.currentExercise >= usersLesson.plan.length - 1
+		return usersLesson.currentExercise >= usersLesson.plan.length
 	}
 	isThereLesson(lesson: number) {
 		return this.lessons[lesson] !== undefined
@@ -196,9 +199,10 @@ export class Engine {
 		} else {
 			usersLesson.plan.push(usersExercise)
 		}
-
-		usersLesson.currentExercise++
 		return isCorrect
+	}
+	incrementExercise(lesson: number) {
+		this.user.lessons[lesson].currentExercise++
 	}
 
 	getScores(lesson: number) {
@@ -267,6 +271,7 @@ function stripDiacritics(str: string) {
 
 export function loadImage(img: string) {
 	const meta = pictures[`../../pics/${img}`]
+	// TODO this is not a string, this is "enhanced" stuff with srcset
 	const wr = writable<string>('')
 	if (meta) {
 		meta().then((module) => {

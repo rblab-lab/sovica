@@ -22,6 +22,7 @@
 		}
 
 		engine.updateUsersXP(xpGain)
+		engine.initLesson(index + 1)
 		engine.saveProgress()
 		goto(`/lessons/${index + 1}`)
 	}
