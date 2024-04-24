@@ -16,12 +16,13 @@
 	let finished = false
 
 	function next() {
+		engine.updateUsersXP(xpGain)
 		if (!engine.isThereLesson(index + 1)) {
 			finished = true
+			engine.saveProgress()
 			return
 		}
 
-		engine.updateUsersXP(xpGain)
 		engine.initLesson(index + 1)
 		engine.saveProgress()
 		goto(`/lessons/${index + 1}`)
@@ -40,9 +41,10 @@
 		<p>Правильно на: {Math.round(correct * 100)}%</p>
 		<p>Опыта получено: {xpGain}</p>
 
-		<button on:click={next} class="btn">next</button>
+		<button on:click={next} class="btn">Дальше</button>
 	{:else}
 		<h2 class="congrats">А всё! ¯\_(ツ)_/¯</h2>
+		<a href="/" class="btn">Повторить</a>
 	{/if}
 </div>
 
@@ -58,6 +60,7 @@
 	}
 	.btn {
 		margin: auto;
+		text-decoration: none;
 		margin-top: 10px;
 		padding: 10px 30px;
 		display: block;

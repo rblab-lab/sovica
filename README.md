@@ -9,7 +9,7 @@ Specification is [here](./docs/spec.md).
 - [x] Fix next when there's no lessons left
 - [x] Responsive images
 - [x] Preload images
-- [ ] Deploy
+- [x] Deploy
 - [ ] Add more lessons
 - [ ] Add hint & about pop-ups
 - [ ] Add json schema for lessons & check for it

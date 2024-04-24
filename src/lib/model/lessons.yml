@@ -10,11 +10,11 @@
     - doviđenja – до свидания
   exercises:
     vocabulary:
-      - ['zdravo', 'здравствуй', 'greeting.webp']
-      - ['dobro jutro', 'доброе утро', 'morning.webp']
-      - ['dobar dan', 'добрый день', 'day.webp']
-      - ['dobro veče', 'добрый вечер', 'evening.webp']
-      - ['doviđenja', 'до свидания', 'greeting.webp']
+      - ['Zdravo', 'Здравствуй', 'greeting.webp']
+      - ['Dobro jutro', 'Доброе утро', 'morning.webp']
+      - ['Dobar dan', 'Добрый день', 'day.webp']
+      - ['Dobro veče', 'Добрый вечер', 'evening.webp']
+      - ['Doviđenja', 'До свидания', 'greeting.webp']
 - title: Глагол Jesam
   img: is.webp
   hint: |
@@ -25,13 +25,13 @@
       - Ja jesam → Ja sam, 
       - Ti jesi → Ti si, 
       - On jeste → On je
-      - Mi jsmo → Mi smo
+      - Mi jesmo → Mi smo
       - Vi jeste → Vi ste
       - Oni jesu → Oni su
   exercises:
     vocabulary:
-      - ['dobar', 'хороший', 'good.webp']
-      - ['veliki', 'большой', 'big.webp']
+      - ['Dobar', 'Хороший', 'good.webp']
+      - ['Veliki', 'Большой', 'big.webp']
     sentences:
       - ['Ja sam iz Minska', 'Я из Минска', 'minsk.webp']
       - ['Ona je iz Moskvi', 'Она из Москвы', 'moscow.webp']
@@ -39,5 +39,26 @@
       - ['One su dobre', 'Они добрые', 'good-w.webp']
       - ['Mi smo iz Beograda', 'Мы из Белграда', 'belgrade.webp']
       - ['Oni su iz Kijeva', 'Они из Киева', 'kiev.webp']
-      - ['Vi ste dobre', 'Вы хорошие', 'good-w.webp']
-      - ['Ja sam dobar', 'Я хороший', 'good.webp']
+      - ['Ti si dobar', 'Ты хороший', 'good.webp']
+- title: Отрицание Nijesam
+  img: isnt.webp
+  hint: |
+    В отличие от большинства стандартных глаголов, jesam имеет собственную отрицательную
+    форму _niejsam_. В реальности, опять же, используется сокращённая форма:
+      - Ja nijesam → Ja nisam, 
+      - Ti nijesi → Ti nisi, 
+      - On nijeste → On nije
+      - Mi nijesmo → Mi nismo
+      - Vi nijeste → Vi niste
+      - Oni nijesu → Oni nisu
+  exercises:
+    vocabulary:
+      - ['Prljav', 'Грязный', 'dirty.webp']
+      - ['Prazan', 'Пустой', 'empty.webp']
+    sentences:
+      - ['Ona nisu prljavi', 'Они не грязные', 'windows.webp']
+      - ['Ti nisi veliki', 'Ты не большой', 'not-big.webp']
+      - ['Ja nisam iz Beograda', 'Я не из Белграда', 'belgrade.webp']
+      - ['Vi niste iz Minska', 'Вы не из Минска', 'minsk.webp']
+      - ['Mi nismo veliki', 'Мы не большие', 'not-bigs.webp']
+      - ['On nije prazan', 'Он не пустой', 'non-empty.webp']

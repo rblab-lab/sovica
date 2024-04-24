@@ -1,5 +1,9 @@
+import fs from 'fs'
 import adapter from '@sveltejs/adapter-static'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
+import { parse } from 'yaml'
+const fileContents = fs.readFileSync('src/lib/model/lessons.yml', 'utf8')
+const data = parse(fileContents, {})
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -22,7 +26,7 @@ const config = {
 		}),
 		prerender: {
 			crawl: true,
-			entries: ['/lessons/0', '/lessons/1', '/congrats/0', '/congrats/1'],
+			entries: data.flatMap((_, i) => ['/lessons/' + i, '/congrats/' + i]),
 		},
 	},
 }
