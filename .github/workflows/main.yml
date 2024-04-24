@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --production
       - name: yarn sharp magic
         run: yarn add sharp --ignore-engines
       - name: Build

@@ -20,6 +20,10 @@ const config = {
 			precompress: false,
 			strict: true,
 		}),
+		prerender: {
+			crawl: true,
+			entries: ['/lessons/0', '/lessons/1', '/congrats/0', '/congrats/1'],
+		},
 	},
 }
 
