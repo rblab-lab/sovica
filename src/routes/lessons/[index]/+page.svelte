@@ -2,7 +2,14 @@
 	import { getContext } from 'svelte'
 	import { goto } from '$app/navigation'
 	import WaitingImage from '$lib/components/WaitingImage.svelte'
-	import { Engine, loadImage, type ExerciseData } from '$lib/model/engine'
+	import {
+		Engine,
+		getMne,
+		getMneAll,
+		loadImage,
+		shuffle,
+		type ExerciseData,
+	} from '$lib/model/engine'
 	import PreloadImage from '$lib/components/PreloadImage.svelte'
 	import Choose from './Choose.svelte'
 	import Construct from './Construct.svelte'
@@ -69,12 +76,17 @@
 			<div class="progress">
 				<div class="bar" style="width: {exercise.progress * 100}%"></div>
 			</div>
-			<WaitingImage src={img} alt={exercise.mne} width={300} height={300} />
+			<WaitingImage src={img} alt={getMne(exercise)} width={300} height={300} />
 			<h2 class="question">{exercise.rus}</h2>
 			{#if exercise.ui === 'choose'}
 				<Choose {choices} on:change={setAnswer} selected={answer} />
 			{:else if exercise.ui === 'construct'}
-				<Construct vocabulary={choices} sentence={exercise.mne} on:change={setAnswer} {answer} />
+				<Construct
+					vocabulary={choices}
+					sentence={shuffle(getMneAll(exercise))[0]}
+					on:change={setAnswer}
+					{answer}
+				/>
 			{:else if exercise.ui === 'translate'}
 				<Translate on:change={setAnswer} {answer} />
 			{/if}

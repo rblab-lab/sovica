@@ -10,11 +10,21 @@
     - doviđenja – до свидания
   exercises:
     vocabulary:
-      - ['Zdravo', 'Здравствуй', 'greeting.webp']
-      - ['Dobro jutro', 'Доброе утро', 'morning.webp']
-      - ['Dobar dan', 'Добрый день', 'day.webp']
-      - ['Dobro veče', 'Добрый вечер', 'evening.webp']
-      - ['Doviđenja', 'До свидания', 'greeting.webp']
+      - mne: Zdravo
+        rus: Здравствуй
+        img: greeting.webp
+      - mne: Dobro jutro
+        rus: Доброе утро
+        img: morning.webp
+      - mne: Dobar dan
+        rus: Добрый день
+        img: day.webp
+      - mne: Dobro veče
+        rus: Добрый вечер
+        img: evening.webp
+      - mne: Doviđenja
+        rus: До свидания
+        img: greeting.webp
 - title: Глагол Jesam
   img: is.webp
   hint: |
@@ -30,16 +40,34 @@
       - Oni jesu → Oni su
   exercises:
     vocabulary:
-      - ['Dobar', 'Хороший', 'good.webp']
-      - ['Veliki', 'Большой', 'big.webp']
+      - mne: Dobar
+        rus: Хороший
+        img: good.webp
+      - mne: Veliki
+        rus: Большой
+        img: big.webp
     sentences:
-      - ['Ja sam iz Minska', 'Я из Минска', 'minsk.webp']
-      - ['Ona je iz Moskvi', 'Она из Москвы', 'moscow.webp']
-      - ['Vi ste veliki', 'Вы большие', 'big.webp']
-      - ['One su dobre', 'Они добрые', 'good-w.webp']
-      - ['Mi smo iz Beograda', 'Мы из Белграда', 'belgrade.webp']
-      - ['Oni su iz Kijeva', 'Они из Киева', 'kiev.webp']
-      - ['Ti si dobar', 'Ты хороший', 'good.webp']
+      - mne: Ja sam iz Minska
+        rus: Я из Минска
+        img: minsk.webp
+      - mne: Ona je iz Moskvi
+        rus: Она из Москвы
+        img: moscow.webp
+      - mne: Vi ste veliki
+        rus: Вы большие
+        img: big.webp
+      - mne: One su dobre
+        rus: Они добрые
+        img: good-w.webp
+      - mne: Mi smo iz Beograda
+        rus: Мы из Белграда
+        img: belgrade.webp
+      - mne: Oni su iz Kijeva
+        rus: Они из Киева
+        img: kiev.webp
+      - mne: Ti si dobar
+        rus: Ты хороший
+        img: good.webp
 - title: Отрицание Nijesam
   img: isnt.webp
   hint: |
@@ -53,12 +81,28 @@
       - Oni nijesu → Oni nisu
   exercises:
     vocabulary:
-      - ['Prljav', 'Грязный', 'dirty.webp']
-      - ['Prazan', 'Пустой', 'empty.webp']
+      - mne: Prljav
+        rus: Грязный
+        img: dirty.webp
+      - mne: Prazan
+        rus: Пустой
+        img: empty.webp
     sentences:
-      - ['Ona nisu prljavi', 'Они не грязные', 'windows.webp']
-      - ['Ti nisi veliki', 'Ты не большой', 'not-big.webp']
-      - ['Ja nisam iz Beograda', 'Я не из Белграда', 'belgrade.webp']
-      - ['Vi niste iz Minska', 'Вы не из Минска', 'minsk.webp']
-      - ['Mi nismo veliki', 'Мы не большие', 'not-bigs.webp']
-      - ['On nije prazan', 'Он не пустой', 'non-empty.webp']
+      - mne: Ona nisu prljavi
+        rus: Они не грязные
+        img: windows.webp
+      - mne: Ti nisi veliki
+        rus: Ты не большой
+        img: not-big.webp
+      - mne: Ja nisam iz Beograda
+        rus: Я не из Белграда
+        img: belgrade.webp
+      - mne: Vi niste iz Minska
+        rus: Вы не из Минска
+        img: minsk.webp
+      - mne: Mi nismo veliki
+        rus: Мы не большие
+        img: not-bigs.webp
+      - mne: On nije prazan
+        rus: Он не пустой
+        img: non-empty.webp

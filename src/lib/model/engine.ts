@@ -11,13 +11,13 @@ interface LessonRaw {
 	img: string
 	hint: string
 	exercises: {
-		vocabulary?: Array<[string, string, string]>
-		sentences?: Array<[string, string, string]>
+		vocabulary?: ExerciseRaw[]
+		sentences?: ExerciseRaw[]
 	}
 }
 
 export interface ExerciseRaw {
-	mne: string
+	mne: string | string[]
 	rus: string
 	img: string
 }
@@ -64,9 +64,8 @@ export class Engine {
 			hint: lesson.hint,
 			done: false,
 			exercises: {
-				vocabulary:
-					lesson.exercises.vocabulary?.map(([mne, rus, img]) => ({ mne, rus, img })) || [],
-				sentences: lesson.exercises.sentences?.map(([mne, rus, img]) => ({ mne, rus, img })) || [],
+				vocabulary: lesson.exercises.vocabulary || [],
+				sentences: lesson.exercises.sentences || [],
 			},
 		}))
 		this.user = {
@@ -188,10 +187,10 @@ export class Engine {
 
 		let isCorrect = false
 		if (usersExercise.ui === 'translate' || usersExercise.ui === 'construct') {
-			const allMne = this.lessons[lesson].exercises[usersExercise.type].map((ex) => ex.mne)
+			const allMne = this.lessons[lesson].exercises[usersExercise.type].flatMap(getMneAll)
 			isCorrect = allMne.some((mne) => strip(mne) === strip(answer))
 		} else {
-			isCorrect = strip(exerciseData.mne) === strip(answer)
+			isCorrect = getMneAll(exerciseData).some((mne) => strip(mne) === strip(answer))
 		}
 		if (isCorrect) {
 			const last = this.user.lessonScores[lesson].correct.length - 1
@@ -233,11 +232,11 @@ export class Engine {
 			if (i < 0) break
 			const prevLesson = this.lessons[i]
 			if (prevLesson.exercises.vocabulary.length) {
-				prevVocabulary = prevLesson.exercises.vocabulary.map((ex) => ex.mne)
+				prevVocabulary = prevLesson.exercises.vocabulary.map(getMne)
 				break
 			}
 		}
-		const vocabulary = lessonData.exercises.vocabulary.map((ex) => ex.mne)
+		const vocabulary = lessonData.exercises.vocabulary.map(getMne)
 		return vocabulary.concat(shuffle(prevVocabulary).slice(0, 4))
 	}
 }
@@ -293,4 +292,12 @@ export function shuffle<T>(array: T[]) {
 		;[array[i], array[j]] = [array[j], array[i]]
 	}
 	return array
+}
+
+export function getMne(ex: ExerciseRaw) {
+	return Array.isArray(ex.mne) ? ex.mne[0] : ex.mne
+}
+
+export function getMneAll(ex: ExerciseRaw) {
+	return Array.isArray(ex.mne) ? ex.mne : [ex.mne]
 }
