@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=./lessons-schema.json
 # cSpell:disable
 - title: 'Приветствия'
   img: greeting.webp

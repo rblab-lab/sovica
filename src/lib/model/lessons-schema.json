@@ -1,0 +1,61 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"title": {
+				"type": "string"
+			},
+			"img": {
+				"type": "string"
+			},
+			"hint": {
+				"type": "string"
+			},
+			"exercises": {
+				"type": "object",
+				"properties": {
+					"vocabulary": {
+						"$ref": "#/definitions/exercise"
+					},
+					"sentences": {
+						"$ref": "#/definitions/exercise"
+					}
+				}
+			}
+		},
+		"required": ["title", "hint", "exercises"]
+	},
+
+	"definitions": {
+		"exercise": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"mne": {
+						"oneOf": [
+							{
+								"type": "string"
+							},
+							{
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						]
+					},
+					"rus": {
+						"type": "string"
+					},
+					"img": {
+						"type": "string"
+					}
+				},
+				"required": ["mne", "rus", "img"]
+			}
+		}
+	}
+}

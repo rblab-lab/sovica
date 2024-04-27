@@ -8,7 +8,23 @@ on:
       - main
 
 jobs:
+  test:
+    if: github.event_name == 'push'
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: yarn install
+      - name: yarn sharp magic
+        run: yarn add sharp --ignore-engines
+      - name: Run tests
+        run: yarn test
   deploy:
+    needs: test
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
