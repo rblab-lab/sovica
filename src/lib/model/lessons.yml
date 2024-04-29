@@ -31,7 +31,7 @@
   hint: |
     Глагол _jesam_ утратил инфинитив, близок по значению к русскому "есть"
     и используется в указательных предложениях там, где в русском "есть"
-    обычно пропускается, например "Я из Москвы", "Ja jesam iz Moskvi". Однако, 
+    обычно пропускается, например "Я из Москвы", "Ja jesam iz Moskve". Однако, 
     в живой речи используется сокращённая форма: 
       - Ja jesam → Ja sam, 
       - Ti jesi → Ti si, 
@@ -44,14 +44,14 @@
       - mne: Dobar
         rus: Хороший
         img: good.webp
-      - mne: Veliki
+      - mne: Velik
         rus: Большой
         img: big.webp
     sentences:
       - mne: Ja sam iz Minska
         rus: Я из Минска
         img: minsk.webp
-      - mne: Ona je iz Moskvi
+      - mne: Ona je iz Moskve
         rus: Она из Москвы
         img: moscow.webp
       - mne: Vi ste veliki
