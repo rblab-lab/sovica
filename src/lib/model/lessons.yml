@@ -58,7 +58,7 @@
         rus: Вы большие
         img: big.webp
       - mne: One su dobre
-        rus: Они добрые
+        rus: Они добрые #про женский род
         img: good-w.webp
       - mne: Mi smo iz Beograda
         rus: Мы из Белграда
@@ -73,13 +73,13 @@
   img: isnt.webp
   hint: |
     В отличие от большинства стандартных глаголов, jesam имеет собственную отрицательную
-    форму _niejsam_. В реальности, опять же, используется сокращённая форма:
+    форму _nijesam_. В реальности, опять же, используется сокращённая форма:
       - Ja nijesam → Ja nisam, 
       - Ti nijesi → Ti nisi, 
-      - On nijeste → On nije
-      - Mi nijesmo → Mi nismo
-      - Vi nijeste → Vi niste
-      - Oni nijesu → Oni nisu
+      - On nijeste → On nije,
+      - Mi nijesmo → Mi nismo,
+      - Vi nijeste → Vi niste,
+      - Oni nijesu → Oni nisu.
   exercises:
     vocabulary:
       - mne: Prljav
@@ -89,10 +89,10 @@
         rus: Пустой
         img: empty.webp
     sentences:
-      - mne: Ona nisu prljavi
+      - mne: Oni nisu prljavi
         rus: Они не грязные
         img: windows.webp
-      - mne: Ti nisi veliki
+      - mne: Ti nisi velik
         rus: Ты не большой
         img: not-big.webp
       - mne: Ja nisam iz Beograda
