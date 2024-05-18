@@ -129,35 +129,25 @@
     vocabulary:
       - mne: Znati (znam)
         rus: Знать
-        img: 
       - mne: Vidjeti (vidim)
         rus: Видеть, увидеть
-        img: 
       - mne: Jesti (jedem)
         rus: Есть, кушать
-        img: 
       - mne: Ići (idem)
         rus: Идти, ехать
-        img: 
     sentences:
       - mne: Oni idu.
         rus: Они идут/едут.
-        img: 
       - mne: Mi znamo
         rus: Мы знаем
-        img: 
       - mne: Vi jedete
         rus: Вы едите
-        img: 
       - mne: Ona vidi
         rus: Она видит
-        img: 
       - mne: Oni znaju
         rus: Они знают
-        img: 
       - mne: Ona vide
         rus: Они видят #про средний род мн.ч.
-        img: 
 - title: Глаголы исключения
   img: 
   hint: |
@@ -182,29 +172,20 @@
     vocabulary:
       - mne: Htjeti
         rus: Хотеть
-        img: 
       - mne: Moći
         rus: Мочь, смочь
-        img: 
       - mne: Imati
         rus: Иметь
-        img: 
     sentences:
       - mne: Oni nemaju
         rus: Они не имеют
-        img: 
       - mne: Mi hoćemo
         rus: Мы хотим
-        img: 
       - mne: Vi možete
         rus: Вы можете
-        img: 
       - mne: Ona neće
         rus: Она не хочет
-        img: 
       - mne: Oni mogu
         rus: Они могут
-        img: 
       - mne: Ja neću
         rus: Я не хочу
-        img: 
