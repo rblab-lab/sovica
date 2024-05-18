@@ -107,3 +107,104 @@
       - mne: On nije prazan
         rus: Он не пустой
         img: non-empty.webp
+- title: Спряжение глаголов
+  img: 
+  hint: |
+    В черногорском языке существуют три спряжения: "А", "I" и "Е". Сложность употребления
+    спряжений заключается в том, что зачастую по инфинитиву определить спряжение глагола
+    является невозможным, но если вы знаете к какому спряжению относится глагол, то пользоваться
+    формами глагола очень просто. Во всех лицах и числах окончания одинаковые за исключением
+    третьего лица множественного числа, для него существует подсказка: a+ju, i→e, e→u.
+    Инфинитив   znati    vidjeti    jesti
+    ja          znam     vidim      jedem
+    ti          znaš     vidiš      jedeš
+    on/ona/ono  zna      vidi       jede
+    mi          znamo    vidimo     jedemo
+    vi          znate    vidite     jedete
+    oni/one/ona znaju    vide       jedu
+    В черногорском есть три вида окончаний: -ti, -sti, -ći. Все глаголы на -sti и -ći
+    относятся к "Е" спряжению при этом значительно видоизменяясь при постановке в
+    спряжение.
+ exercises:
+    vocabulary:
+      - mne: Znati (znam)
+        rus: Знать
+        img: 
+      - mne: Vidjeti (vidim)
+        rus: Видеть, увидеть
+        img: 
+      - mne: Jesti (jedem)
+        rus: Есть, кушать
+        img: 
+      - mne: Ići (idem)
+        rus: Идти, ехать
+        img: 
+    sentences:
+      - mne: Oni idu.
+        rus: Они идут/едут.
+        img: 
+      - mne: Mi znamo
+        rus: Мы знаем
+        img: 
+      - mne: Vi jedete
+        rus: Вы едите
+        img: 
+      - mne: Ona vidi
+        rus: Она видит
+        img: 
+      - mne: Oni znaju
+        rus: Они знают
+        img: 
+      - mne: Ona vide
+        rus: Они видят #про средний род мн.ч.
+        img: 
+- title: Глаголы исключения
+  img: 
+  hint: |
+    В черногорском языке существуют три глагола исключения, помимо jesam. Это глаголы
+    htjeti, moći и imati. Два из них имеют неправильное спряжение: 
+    Инфинитив   htjeti    moći
+    ja          hoću      mogu
+    ti          hoćeš     možeš
+    on/ona/ono  hoće      može
+    mi          hoćemo    možemo
+    vi          hoćete    možete
+    oni/one/ona hoće      mogu
+    а два свою собственную отрицательную форму:
+    Инфинитив   htjeti    imati
+    ja          neću      nemam
+    ti          nećeš     nemaš
+    on/ona/ono  neće      nema
+    mi          nećemo    nemamo
+    vi          nećete    nemate
+    oni/one/ona neće      nemaju
+  exercises:
+    vocabulary:
+      - mne: Htjeti
+        rus: Хотеть
+        img: 
+      - mne: Moći
+        rus: Мочь, смочь
+        img: 
+      - mne: Imati
+        rus: Иметь
+        img: 
+    sentences:
+      - mne: Oni nemaju
+        rus: Они не имеют
+        img: 
+      - mne: Mi hoćemo
+        rus: Мы хотим
+        img: 
+      - mne: Vi možete
+        rus: Вы можете
+        img: 
+      - mne: Ona neće
+        rus: Она не хочет
+        img: 
+      - mne: Oni mogu
+        rus: Они могут
+        img: 
+      - mne: Ja neću
+        rus: Я не хочу
+        img: 
