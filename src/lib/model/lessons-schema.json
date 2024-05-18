@@ -54,7 +54,7 @@
 						"type": "string"
 					}
 				},
-				"required": ["mne", "rus", "img"]
+				"required": ["mne", "rus"]
 			}
 		}
 	}

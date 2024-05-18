@@ -30,7 +30,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/enhanced-img": "^0.2.0",
-		"sharp": "^0.33.3",
+		"sharp": "^0.33.4",
 		"yaml": "^2.4.1"
 	}
 }
