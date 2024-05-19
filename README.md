@@ -11,10 +11,9 @@ Specification is [here](./docs/spec.md).
 - [x] Preload images
 - [x] Deploy
 - [ ] Add more lessons
-- [ ] Add hint & about pop-ups
+- [x] Add hint & about pop-ups
 - [x] Add json schema for lessons & check for it
 - [ ] Add License
-- [ ] Set permissions
 
 ## Developing
 

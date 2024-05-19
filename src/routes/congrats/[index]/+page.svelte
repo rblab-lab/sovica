@@ -10,6 +10,7 @@
 	let xpGain: number
 	engine.isReady.subscribe((isReady) => {
 		if (isReady) {
+			engine.exitLesson()
 			;({ correct, xpGain } = engine.getScores(index))
 		}
 	})

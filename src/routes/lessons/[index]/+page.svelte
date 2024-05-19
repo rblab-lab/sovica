@@ -15,6 +15,7 @@
 	import Construct from './Construct.svelte'
 	import Translate from './Translate.svelte'
 	import type { Writable } from 'svelte/store'
+	import Button from '$lib/components/Button.svelte'
 
 	export let data
 	const engine = getContext<Engine>('engine')
@@ -60,6 +61,7 @@
 		}
 		exercise = engine.getCurrentExercise(index)
 		if (exercise) {
+			engine.enterLesson()
 			img = loadImage(exercise.img)
 		}
 		answer = ''
@@ -97,9 +99,9 @@
 				<p class="result wrong">Неверно, на самом деле: {exercise.mne}</p>
 			{/if}
 
-			<button type="submit" on:click={check} class="btn">
+			<Button type="submit" on:click={check}>
 				{isCorrect === null ? 'Проверить' : isCorrect ? 'Супер!' : 'Ладно!'}
-			</button>
+			</Button>
 		{/if}
 	</div>
 </form>
@@ -130,20 +132,6 @@
 	.question {
 		text-align: center;
 		margin-top: 10px;
-	}
-	.btn {
-		margin: auto;
-		margin-top: 10px;
-		padding: 10px 30px;
-		display: block;
-		max-width: 200px;
-		background: #5470bd;
-		color: rgb(255, 255, 255);
-		border: 1px solid #1b3681;
-		border-radius: 5px;
-		font-size: large;
-		cursor: pointer;
-		text-transform: uppercase;
 	}
 	.result {
 		margin-top: 10px;

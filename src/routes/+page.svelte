@@ -9,6 +9,7 @@
 	let preloadImage: ReturnType<typeof loadImage> | undefined
 	engine.isReady.subscribe((isReady) => {
 		if (isReady) {
+			engine.exitLesson()
 			lessons = engine.getLessons()
 			const nextLesson = lessons.find((lesson) => lesson.isFuture)
 			const nextIndex = nextLesson ? lessons.indexOf(nextLesson) : lessons.length

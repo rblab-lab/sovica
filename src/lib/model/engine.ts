@@ -57,6 +57,7 @@ export class Engine {
 	user: User
 	userXP: Writable<number>
 	isReady: Writable<boolean> = writable(false)
+	inLesson: Writable<boolean> = writable(false)
 	constructor(lessons: LessonRaw[]) {
 		this.lessons = lessons.map((lesson) => ({
 			title: lesson.title,
@@ -106,9 +107,20 @@ export class Engine {
 		})
 	}
 
+	enterLesson() {
+		this.inLesson.set(true)
+	}
+	exitLesson() {
+		this.inLesson.set(false)
+	}
+	getHelp(lesson: number) {
+		return this.lessons[lesson].hint
+	}
+
 	getCurrentExercise(lesson: number): ExerciseData | null {
 		let usersLesson = this.user.lessons[lesson]
 		if (!usersLesson) {
+			// FIXME: if user doesn't have current lesson, it will show the blank page
 			return null
 		}
 		const current = usersLesson.plan[usersLesson.currentExercise]
