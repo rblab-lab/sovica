@@ -31,7 +31,8 @@
 			'Изучаем\n Черногорский вместе с Sovica!\n\n' +
 			'Вдохоновлено [Duolingo](https://www.duolingo.com/).\n' +
 			'### Авторы:\n' +
-			'- [Роман Беккиев](https://t.me/rombek)\n' +
+			'- Код: [Роман Беккиев](https://t.me/rombek)\n' +
+			'- Уроки: [Глеб Бедняков](https://t.me/bedniy_violist)\n\n' +
 			'Бесплатно, без регистрации и смс. Навсегда. [Исходники доступны на GitHub](https://github.com/rblab-lab/sovica)\n'
 		// cspell:enable
 	}
