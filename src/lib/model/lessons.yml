@@ -107,53 +107,137 @@
       - mne: On nije prazan
         rus: Он не пустой
         img: non-empty.webp
-- title: Спряжение глаголов
+- title: Спряжения глаголов: А спряжение
   hint: |
     В черногорском языке существуют три спряжения: _"А"_, _"I"_ и _"Е"_. Сложность употребления
     спряжений заключается в том, что зачастую по инфинитиву определить спряжение глагола
     является невозможным, но если вы знаете к какому спряжению относится глагол, то пользоваться
-    формами глагола очень просто. Во всех лицах и числах окончания одинаковые за исключением
-    третьего лица множественного числа, для него существует подсказка: **a+ju**, **i→e**, **e→u**.
+    формами глагола очень просто. Для начала разберём _"A"_ спряжение на примере глагола _"znati"_:
 
-    | Инфинитив   | znati   | vidjeti   | jesti  |  
-    | ----------- | ------- | --------- | -----  |  
-    | ja          | znam    | vidim     | jedem  |  
-    | ti          | znaš    | vidiš     | jedeš  |  
-    | on/ona/ono  | zna     | vidi      | jede   | 
-    | mi          | znamo   | vidimo    | jedemo |   
-    | vi          | znate   | vidite    | jedete |   
-    | oni/one/ona | znaju   | vide      | jedu   | 
+    | Инфинитив   | znati   |
+    | ----------- | ------- |
+    | ja          | znam    |
+    | ti          | znaš    |
+    | on/ona/ono  | zna     |
+    | mi          | znamo   |
+    | vi          | znate   |
+    | oni/one/ona | znaju   |
 
-    В черногорском есть три вида окончаний: _-ti_, _-sti_, _-ći_. Все глаголы на -sti и -ći
-    относятся к "Е" спряжению при этом значительно видоизменяясь при постановке в
-    спряжение.
+    _"A"_ спряжение самое простое и в 95% следует только заменить инфинитивное окончание _-ti_ на
+    требуемое лицом и числом окончание.
   exercises:
     vocabulary:
       - mne: Znati (znam)
         rus: Знать
+      - mne: Pjevati (pjevam)
+        rus: Петь
+      - mne: Plivati (plivam)
+        rus: Плавать
+      - mne: Gledati (gledam)
+        rus: Смотреть
+    sentences:
+      - mne: Oni gledaju u nebo.
+        rus: Они смотрят на небо.
+      - mne: Mi znamo.
+        rus: Мы знаем.
+      - mne: Vi pjevate u horu.
+        rus: Вы поёте в хоре.
+      - mne: Ona pliva u moru.
+        rus: Она плавает в море.
+      - mne: Oni znaju strašnu tajnu.
+        rus: Они знают страшный секрет.
+      - mne: Ona gledaju film.
+        rus: Они смотрят фильм. #про средний род мн.ч.
+- title: Спряжения глаголов: I спряжение
+  hint: |
+    _"I"_ спряжение включает в себя достаточно много глаголов, но в нём есть не только
+    глаголы, у которых достаточно просто заменить инфинитивное окончание на требуемое лицом
+    и числом, но и глаголы, у которых перед этим окончанием стоит словосочетание **je**,
+    которое при постановке в спряжение заменится на **i**.
+
+   | Инфинитив   | raditi   | vidjeti |
+   | ----------- | -------  | ------- |
+   | ja          | radim    | vidim   |
+   | ti          | radiš    | vidiš   |
+   | on/ona/ono  | radi     | vidi    |
+   | mi          | radimo   | vidimo  |
+   | vi          | radite   | vidite  |
+   | oni/one/ona | rade     | vide    |
+
+   _"I"_ спряжение также включает в себя только те глаголы, которые в инфинитиве заканчиваются
+   на _-ti_.
+   exercises:
+    vocabulary:
+      - mne: Raditi (radim)
+        rus: Работать
       - mne: Vidjeti (vidim)
         rus: Видеть, увидеть
+      - mne: Nositi (nosim)
+        rus: Носить
+      - mne: Sjedjeti (sjedim)
+        rus: Сидеть
+    sentences:
+      - mne: Oni mnogo rade.
+        rus: Они много работают.
+      - mne: Vi loše vidite.
+        rus: Вы плохо видите.
+      - mne: Mi nosimo naočare.
+        rus: Мы носим очки.
+      - mne: Ona sjedi na plaži.
+        rus: Она сидит на пляже.
+      - mne: Oni vide ajkulu.
+        rus: Они видят акулу.
+      - mne: One sjede na klupi.
+        rus: Они сидят на лавочке. #про женский род мн.ч.
+- title: Спряжения глаголов: E спряжение
+  hint: |
+    _"E"_ спряжение в черногорском языке самое противное. Сюда относятся все "неправильные"
+    глаголы. На самом деле, неправильных глаголов в черногорском нет, это просто глаголы,
+    у которых со временем их изначальная форма трансформировалась, благодаря замене концов
+    слов на окончания **-sti** и **-ći**. Их формы в спряжении никак (кроме первых нескольких
+    букв) не похожи на инфинитив, поэтому легче всего изначально запоминать обе формы глагола:
+    инфинитив и форму глагола в 1 лице ед.ч.
+
+    | Инфинитив   | jesti     | ići   |
+    | ----------- | --------- | ----- |
+    | ja          | jedem     | idem  |
+    | ti          | jedeš     | ideš  |
+    | on/ona/ono  | jede      | ide   |
+    | mi          | jedemo    | idemo |
+    | vi          | jedete    | idete |
+    | oni/one/ona | jedu      | idu   |
+
+    Важно! В черногорском языке нет разницы между _идти_ и _ехать_, для этих глаголов употребляется
+    один глагол - _ići_. То же самое происходит и со всеми остальными глаголами движения: _doći_ - 
+    _дойти, доехать_, _otići_ - _уйти, уехать_ и т.д.
+    exercises:
+     vocabulary:
       - mne: Jesti (jedem)
         rus: Есть, кушать
       - mne: Ići (idem)
         rus: Идти, ехать
-    sentences:
-      - mne: Oni idu.
-        rus: Они идут/едут.
-      - mne: Mi znamo
-        rus: Мы знаем
-      - mne: Vi jedete
-        rus: Вы едите
-      - mne: Ona vidi
-        rus: Она видит
-      - mne: Oni znaju
-        rus: Они знают
-      - mne: Ona vide
-        rus: Они видят #про средний род мн.ч.
+      - mne: Peći (pečem)
+        rus: Печь
+      - mne: Plesti (pletem)
+        rus: Плести
+     sentences:
+      - mne: Oni ukusno jedu.
+        rus: Они вкусно кушают.
+      - mne: Vi idete u Podgoricu.
+        rus: Вы едете/идёте в Подгорицу.
+      - mne: Mi pečemo kifle.
+        rus: Мы печём рогалики.
+      - mne: Ona plete džemper.
+        rus: Она плетёт свитер.
+      - mne: Oni idu po hljeb.
+        rus: Они едут/идут за хлебом.
+      - mne: Ona peku velika peciva.
+        rus: Они пекут большую выпечку. #про средний род мн.ч.
 - title: Глаголы исключения
   hint: |
-    В черногорском языке существуют три глагола исключения, помимо jesam. Это глаголы
-    _htjeti_, _moći_ и _imati_. Два из них имеют неправильное спряжение: 
+    В черногорском языке существуют два глагола исключения, помимо jesam. Это глаголы
+    _htjeti_ и _moći_:
+    
     | Инфинитив   | htjeti    | moći   |
     | ----------- | --------- | ------ |
     | ja          | hoću      | mogu   |
@@ -163,7 +247,57 @@
     | vi          | hoćete    | možete |
     | oni/one/ona | hoće      | mogu   |
 
-    A два свою собственную отрицательную форму:
+  exercises:
+    vocabulary:
+      - mne: Htjeti
+        rus: Хотеть
+      - mne: Moći
+        rus: Мочь, смочь
+      
+    sentences:
+      - mne: Oni hoće kafu
+        rus: Они хотят кофе
+      - mne: Ja mogu
+        rus: Я могу
+      - mne: On hoće sladoled
+        rus: Он хочет мороженое
+      - mne: Ona mogu
+        rus: Они могут #про средний род мн.ч.
+      - mne: Ja hoću u Pariz
+        rus: Я хочу в Париж
+- title: Отрицания
+  hint: |
+    Отрицания в черногорском языке строятся по тому же принципу, что и в русском: не с глаголами
+    пиши раздельно. Только в нашем случае _не_ будет произноситься _нэ_, хотя и пишется при этом
+    _ne_.
+    exercises:
+     vocabulary:
+      - mne: Spavati (spavam)
+        rus: Спать
+      - mne: Pisati (pišem)
+        rus: Писа́ть
+      - mne: Prati (perem)
+        rus: Мыть
+      - mne: Govoriti (govorim)
+        rus: Говорить
+     sentences:
+      - mne: Oni ne spavaju u krevetu.
+        rus: Они не спят в кровати.
+      - mne: Vi ne perete podove.
+        rus: Вы не моете полы.
+      - mne: Mi ne govorimo na crnogorskom.
+        rus: Мы не говорим на черногорском.
+      - mne: Ona ne piše tekstove.
+        rus: Она не пишет тексты.
+      - mne: Oni ne govore sa mačkama.
+        rus: Они не говорят с кошками.
+      - mne: Ona ne peru sudove.
+        rus: Они не моют посуду. #про средний род мн.ч.
+- title: Исключения в отрицании
+  hint: |
+    В черногорском существуют два глагола (помимо **jesam**), у которых есть своя отрицательная форма.
+    Употребление частички **ne** с ними считается грубейшей ошибкой!
+    
     | Инфинитив   | htjeti    | imati  |
     | ----------- | --------- | ------ |
     | ja          | neću      | nemam  |
@@ -172,24 +306,21 @@
     | mi          | nećemo    | nemamo |
     | vi          | nećete    | nemate |
     | oni/one/ona | neće      | nemaju |
-  exercises:
-    vocabulary:
-      - mne: Htjeti
-        rus: Хотеть
-      - mne: Moći
-        rus: Мочь, смочь
-      - mne: Imati
+    
+    exercises:
+     vocabulary:
+      - mne: Imati (imam)
         rus: Иметь
-    sentences:
-      - mne: Oni nemaju
-        rus: Они не имеют
-      - mne: Mi hoćemo
-        rus: Мы хотим
-      - mne: Vi možete
-        rus: Вы можете
-      - mne: Ona neće
-        rus: Она не хочет
-      - mne: Oni mogu
-        rus: Они могут
-      - mne: Ja neću
-        rus: Я не хочу
+     sentences:
+      - mne: Oni neće na Žabljak.
+        rus: Они не хотят в Жабляк.
+      - mne: Vi nemate pare.
+        rus: У вас нет денег.
+      - mne: Mi nećemo pljeskavicu.
+        rus: Мы не хотим плескавицу.
+      - mne: Ona nema papagaja.
+        rus: У неё нет попугая.
+      - mne: Oni nemaju klimu u stanu.
+        rus: У них нет кондиционера в квартире.
+      - mne: Ona neće u vrtić.
+        rus: Они не хотят в детский сад. #про средний род мн.ч.
