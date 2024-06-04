@@ -126,18 +126,9 @@
     _"A"_ спряжение самое простое и в 95% следует только заменить инфинитивное окончание _-ti_ на
     требуемое лицом и числом окончание.
   exercises:
-    vocabulary:
-      - mne: Znati (znam)
-        rus: Знать
-      - mne: Pjevati (pjevam)
-        rus: Петь
-      - mne: Plivati (plivam)
-        rus: Плавать
-      - mne: Gledati (gledam)
-        rus: Смотреть
     sentences:
-      - mne: Oni gledaju u nebo.
-        rus: Они смотрят на небо.
+      - mne: Oni otvaraju prodavnicu.
+        rus: Они открывают магазин.
       - mne: Mi znamo.
         rus: Мы знаем.
       - mne: Vi pjevate u horu.
@@ -148,6 +139,14 @@
         rus: Они знают страшный секрет.
       - mne: Ona gledaju film.
         rus: Они смотрят фильм. #про средний род мн.ч.
+      - mne: Ti kucaš poruku.
+        rus: Ты печатаешь сообщение.
+      - mne: Vi kupate psa.
+        rus: Вы купаете собаку.
+      - mne: Oni mijenjaju vrata.
+        rus: Они меняют дверь.
+      - mne: Ona hoda po stanu.
+        rus: Она ходит по квартире.
 - title: "Спряжения глаголов: I спряжение"
   hint: |
     _"I"_ спряжение включает в себя достаточно много глаголов, но в нём есть не только
@@ -167,15 +166,6 @@
     _"I"_ спряжение также включает в себя только те глаголы, которые в инфинитиве заканчиваются
     на _-ti_.
   exercises:
-    vocabulary:
-      - mne: Raditi (radim)
-        rus: Работать
-      - mne: Vidjeti (vidim)
-        rus: Видеть, увидеть
-      - mne: Nositi (nosim)
-        rus: Носить
-      - mne: Sjedjeti (sjedim)
-        rus: Сидеть
     sentences:
       - mne: Oni mnogo rade.
         rus: Они много работают.
@@ -189,6 +179,14 @@
         rus: Они видят акулу.
       - mne: One sjede na klupi.
         rus: Они сидят на лавочке. #про женский род мн.ч.
+      - mne: Ti sušiš veš.
+        rus: Ты сушишь бельё.
+      - mne: Ja vozim do Berana.
+        rus: Я еду за рулём до Беране.
+      - mne: Oni misle na tebe.
+        rus: Они думают о тебе.
+      - mne: Ti hraniš mačku.
+        rus: Ты кормишь кошку.
 - title: "Спряжения глаголов: E спряжение"
   hint: |
     _"E"_ спряжение в черногорском языке самое противное. Сюда относятся все "неправильные"
@@ -211,15 +209,6 @@
     один глагол - _ići_. То же самое происходит и со всеми остальными глаголами движения: _doći_ - 
     _дойти, доехать_, _otići_ - _уйти, уехать_ и т.д.
   exercises:
-     vocabulary:
-      - mne: Jesti (jedem)
-        rus: Есть, кушать
-      - mne: Ići (idem)
-        rus: Идти, ехать
-      - mne: Peći (pečem)
-        rus: Печь
-      - mne: Plesti (pletem)
-        rus: Плести
      sentences:
       - mne: Oni ukusno jedu.
         rus: Они вкусно кушают.
@@ -233,6 +222,14 @@
         rus: Они едут/идут за хлебом.
       - mne: Ona peku velika peciva.
         rus: Они пекут большую выпечку. #про средний род мн.ч.
+      - mne: Ja razumijem ruski jezik.
+        rus: Я понимаю русский язык.
+      - mne: On piše pjesmu.
+        rus: Он пишет песню.
+      - mne: Vi perete sudove.
+        rus: Вы моете посуду.
+      - mne: Oni kreću za 5 minuta.
+        rus: Они выезжают/выходят через 5 минут.
 - title: Глаголы исключения
   hint: |
     В черногорском языке существуют два глагола исключения, помимо jesam. Это глаголы
@@ -270,15 +267,6 @@
     пиши раздельно. Только в нашем случае _не_ будет произноситься _нэ_, хотя и пишется при этом
     _ne_.
   exercises:
-    vocabulary:
-      - mne: Spavati (spavam)
-        rus: Спать
-      - mne: Pisati (pišem)
-        rus: Писа́ть
-      - mne: Prati (perem)
-        rus: Мыть
-      - mne: Govoriti (govorim)
-        rus: Говорить
     sentences:
       - mne: Oni ne spavaju u krevetu.
         rus: Они не спят в кровати.
@@ -292,6 +280,14 @@
         rus: Они не говорят с кошками.
       - mne: Ona ne peru sudove.
         rus: Они не моют посуду. #про средний род мн.ч.
+      - mne: Ja ne volim meso.
+        rus: Я не люблю мясо.
+      - mne: Ti ne želiš kafu.
+        rus: Ты не хочешь кофе.
+      - mne: Oni ne slušaju nastavnika.
+        rus: Они не слушают учителя.
+      - mne: Ona ne dolazi na časove.
+        rus: Она не приходит на уроки.
 - title: Исключения в отрицании
   hint: |
     В черногорском существуют два глагола (помимо **jesam**), у которых есть своя отрицательная форма.
